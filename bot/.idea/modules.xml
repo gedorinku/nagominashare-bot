@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nagominashare_bot.iml" filepath="$PROJECT_DIR$/.idea/modules/nagominashare_bot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nagominashare_bot_main.iml" filepath="$PROJECT_DIR$/.idea/modules/nagominashare_bot_main.iml" group="nagominashare_bot" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/nagominashare_bot_test.iml" filepath="$PROJECT_DIR$/.idea/modules/nagominashare_bot_test.iml" group="nagominashare_bot" />
+    </modules>
+  </component>
+</project>
