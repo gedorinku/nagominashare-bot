@@ -1,9 +1,6 @@
 package io.github.gedorinku.nagominashare_bot
 
-import twitter4j.Paging
-import twitter4j.Status
-import twitter4j.Twitter
-import twitter4j.TwitterException
+import twitter4j.*
 import java.util.*
 
 /**
@@ -12,9 +9,11 @@ import java.util.*
 class StatusSampler(val twitter: Twitter) {
 
     private val random: Random = Random()
+    private val me: User = twitter.verifyCredentials()
 
     fun sample(): Status {
-        val statuses = twitter.getHomeTimeline(Paging())?.filter { !it.isRetweet }
+        val statuses = twitter.getHomeTimeline(Paging())
+                ?.filter { !it.isRetweet && it.user.id != me.id }
                 ?: throw TwitterException("could not get time line.")
         if (statuses.isEmpty()) {
             throw TwitterException("could not sample any tweets.")
