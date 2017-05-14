@@ -12,7 +12,9 @@ class StatusSampler(val twitter: Twitter) {
     private val me: User = twitter.verifyCredentials()
 
     fun sample(): Status {
-        val statuses = twitter.getHomeTimeline(Paging())
+        val paging = Paging()
+        paging.count = 200
+        val statuses = twitter.getHomeTimeline(paging)
                 ?.filter { !it.isRetweet && it.user.id != me.id }
                 ?: throw TwitterException("could not get time line.")
         if (statuses.isEmpty()) {
