@@ -44,6 +44,7 @@ private fun tryGenerate(sampler: StatusSampler, generator: DajareGenerator)
         val status = sampler.sample()
         println(status.text)
         val dajare = generator.generate(status.text)
+        sampler.onNext()
         return Pair(null, dajare)
     } catch (e: Throwable) {
         e.printStackTrace()
