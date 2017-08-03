@@ -13,6 +13,9 @@ buildscript {
 }
 
 apply plugin: 'kotlin'
+apply plugin: 'application'
+
+mainClassName = 'io.github.gedorinku.nagominashare_bot.MainKt'
 
 repositories {
     mavenCentral()
