@@ -8,4 +8,4 @@
 1. ``` docker build -t nagominashare-image . ```
 1. ``` docker run -d --name nagominashare-contaniner nagominashare-image ```
 
-bot の仕様が変わったら mucho613 (mucho613@gmail.com) がそれに合わせて書き直します。
+bot(Fork 元) の仕様が変わったら mucho613 (mucho613@gmail.com) がそれに合わせて書き直します。
